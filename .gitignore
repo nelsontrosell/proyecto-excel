@@ -1,1 +1,4 @@
-*.xls
+.xls
+Projecto-Excels/bin/
+Projecto-Excels/debug/
+.vs/
