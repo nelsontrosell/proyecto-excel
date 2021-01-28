@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Projecto-Excels": {
+      "commandName": "Project",
+      "commandLineArgs": "--sheeet \"DAISY MENDEZ\" --from \"A3\" --to \"J13\""
+    }
+  }
+}

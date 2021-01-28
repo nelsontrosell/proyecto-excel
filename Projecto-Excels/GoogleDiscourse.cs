@@ -10,12 +10,9 @@ namespace Projecto_Excels
 
     public class GoogleSheetParameters
     {
-        public string RangeColumnStart { get; set; }
-        public int RangeRowStart { get; set; }
-        public string RangeColumnEnd { get; set; }
-        public int RangeRowEnd { get; set; }
+        public string FromCell { get; set; }
+        public string ToCell { get; set; }
         public string SheetName { get; set; }
-        public bool FirstRowIsHeaders { get; set; }
     }
 
     public class GoogleDiscourse
@@ -40,7 +37,7 @@ namespace Projecto_Excels
 
         public IList<IList<Object>> GetDataFromSheet(GoogleSheetParameters googleSheetParameters)
         {
-            var range = $"{googleSheetParameters.SheetName}!{googleSheetParameters.RangeColumnStart}{googleSheetParameters.RangeRowStart}:{googleSheetParameters.RangeColumnEnd}{googleSheetParameters.RangeRowEnd}";
+            var range = $"{googleSheetParameters.SheetName}!{googleSheetParameters.FromCell}:{googleSheetParameters.ToCell}";
             SpreadsheetsResource.ValuesResource.GetRequest request =
                 _sheetsService.Spreadsheets.Values.Get(_spreadsheetId, range);
 
